@@ -1,0 +1,114 @@
+===========================================
+SESSION 1: UNDERSTANDING APIs & CLIENT-SERVER COMMUNICATION
+===========================================
+
+TASK 1:
+--------
+URL: https://jsonplaceholder.typicode.com/posts
+
+- Base URL: https://jsonplaceholder.typicode.com
+- Specific Endpoint: /posts
+- HTTP Method: GET
+
+
+TASK 2:
+--------
+GET Request: https://jsonplaceholder.typicode.com/users
+
+- Status Code: 200 OK
+
+- Three Fields in Response Body:
+  1. id - number (example: 1)
+  2. name - string (example: "Leanne Graham")
+  3. email - string (example: "Sincere@april.biz")
+
+- Headers Present:
+  - Content-Type: application/json; charset=utf-8
+  - Content-Length: (size in bytes)
+  - Cache-Control: max-age=...
+  - Server: cloudflare
+
+
+TASK 3:
+--------
+Selected API: Dog API (Random Dog Images)
+
+- Endpoint URL: https://dog.ceo/api/breeds/image/random
+
+- Data Returns: Random dog image URL in JSON format
+
+- Response Example:
+  {
+    "message": "https://images.dog.ceo/breeds/hound-afghan/n02088094_100.jpg",
+    "status": "success"
+  }
+
+
+TASK 4:
+--------
+Given Response:
+{
+  "id": 10,
+  "title": "Flutter Assignment",
+  "completed": false
+}
+
+Field Explanations:
+-------------------
+| Field      | Data Type  | Meaning                              |
+|------------|------------|--------------------------------------|
+| id         | Number     | Unique identifier for the task       |
+| title      | String     | Title or description of the task     |
+| completed  | Boolean    | Status - true if task is completed   |
+
+
+TASK 5:
+--------
+Flipkart-style Product Listing App - Endpoints:
+
+Endpoint 1:
+-----------
+- URL Pattern: GET /api/products?category=electronics&page=1&limit=20
+- HTTP Method: GET
+- Expected Response: List of Products
+  {
+    "products": [
+      {
+        "id": 1,
+        "name": "iPhone 15",
+        "price": 79999,
+        "image": "image_url",
+        "rating": 4.5,
+        "category": "Electronics"
+      }
+    ],
+    "total": 100,
+    "page": 1,
+    "limit": 20
+  }
+
+Endpoint 2:
+-----------
+- URL Pattern: GET /api/products/{productId}
+  Example: GET /api/products/1
+- HTTP Method: GET
+- Expected Response: Single Product Details
+  {
+    "id": 1,
+    "name": "iPhone 15",
+    "price": 79999,
+    "description": "Latest iPhone with A16 chip",
+    "images": ["image1_url", "image2_url"],
+    "specifications": {
+      "display": "6.1 inch",
+      "storage": "128GB",
+      "color": "Black"
+    },
+    "reviews": [
+      {
+        "user": "John",
+        "rating": 5,
+        "comment": "Great phone!"
+      }
+    ]
+  }
